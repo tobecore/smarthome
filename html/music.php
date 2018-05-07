@@ -2,7 +2,7 @@
 
 
 
-echo($_GET);
+print_r($_GET);
 
 ?>
     <form action="music.php" method="get">
