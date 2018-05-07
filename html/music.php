@@ -8,7 +8,7 @@ $action = $_GET['action'];
 switch ($action) {
     case "Start":
         echo "Sarting 1";
-        echo exec("mplayer http://online-radioroks2.tavrmedia.ua/RadioROKS_NewRock");
+        exec("mplayer -slave -quiet http://online-radioroks2.tavrmedia.ua/RadioROKS_NewRock </dev/null >/dev/null 2>&1 &");
         echo "Sarting 2";
         break;
     case "Pause":
