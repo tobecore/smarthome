@@ -13,12 +13,12 @@ $radiostations_arr = [
 
 var_dump($radiostations_arr[$command]);
 
-function parseCommand($command){
-    //if (isset($radiostations_arr[$command])) {
+function parseCommand($command, $radiostations_arr){
+    if (isset($radiostations_arr[$command])) {
         runStation($radiostations_arr[$command]);
-    //} else {
+    } else {
         printMessage("No such channel");
-    //}
+    }
     if ($command == "stop") {
         exec("pkill mplayer");
     }
@@ -41,7 +41,7 @@ function printMessage ($text) {
 
 
 
-parseCommand($command);
+parseCommand($command, $radiostations_arr);
 
 
 ?>
