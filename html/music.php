@@ -1,8 +1,6 @@
 <?php
 
 
-
-print_r($_GET);
 $command = $_GET['text'];
 
 $radiostations_arr = [
@@ -13,13 +11,18 @@ $radiostations_arr = [
 
 function parseCommand($command, $radiostations_arr){
     if (isset($radiostations_arr[$command])) {
+        stopStation ();
         runStation($radiostations_arr[$command]);
     } else {
         printMessage("No such channel");
     }
     if ($command == "stop") {
-        exec("pkill mplayer");
+        stopStation ();
     }
+}
+
+function stopStation (){
+    exec("pkill mplayer");
 }
 
 function runStation ($link){
