@@ -6,7 +6,8 @@ $command = $_GET['text'];
 $radiostations_arr = [
     "rock" => "http://online-radioroks2.tavrmedia.ua/RadioROKS_NewRock",
     "dance" => "http://online-kissfm.tavrmedia.ua/KissFM_Live",
-    "rap" => "http://192.96.205.59:7660/listen.pls?sid=1"
+    "rap" => "http://192.96.205.59:7660/listen.pls",
+    "retro" => "http://cast.radiogroup.com.ua:8000/retro"
 ];
 
 function parseCommand($command, $radiostations_arr){
