@@ -11,8 +11,6 @@ $radiostations_arr = [
     "rap" => "http://192.96.205.59:7660/listen.pls?sid=1"
 ];
 
-var_dump($radiostations_arr[$command]);
-
 function parseCommand($command, $radiostations_arr){
     if (isset($radiostations_arr[$command])) {
         runStation($radiostations_arr[$command]);
