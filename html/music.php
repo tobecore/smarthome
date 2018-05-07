@@ -12,6 +12,7 @@ switch ($action) {
         echo "Sarting 2";
         break;
     case "Pause":
+        exec("pkill mplayer");
         break;
 }
 
